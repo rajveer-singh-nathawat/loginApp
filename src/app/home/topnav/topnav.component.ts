@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/sharedservices/authservice/auth.service';
 
 @Component({
   selector: 'app-topnav',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopnavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly auth: AuthService) { }
 
   ngOnInit() {
   }
-
+  onLoggedOut(){
+this.auth.logOut();
+  }
 }

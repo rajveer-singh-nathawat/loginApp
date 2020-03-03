@@ -1,0 +1,22 @@
+.top-nav{
+    background: antiquewhite;
+    height: 42px;
+}
+.top-nav .heading{
+    float: left;
+    padding-left: 11px;
+    padding-top: 3px;
+    font-size: 1.4rem;
+}
+.top-nav .link{
+    float: left;
+    padding-left: 15px;
+    font-size: 18px;
+    padding-top: 5px !important;
+}
+
+.top-nav .logout{
+    float: right;
+    margin-right: 5px;
+    margin-top: 4px;
+}

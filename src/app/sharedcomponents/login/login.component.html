@@ -1,3 +1,8 @@
-<p>
-  login works!
-</p>
+<h2>Login</h2>
+<form [formGroup]="signinForm" (ngSubmit)="handleLogin()" autocomplete="off">
+  <span>username</span>
+  <input  placeholder="userName" formControlName="userName" required id="username">
+  <span>password</span>
+  <input type="password" placeholder="password" formControlName="password" required id="password">
+  <button type="submit">Login</button>
+</form>

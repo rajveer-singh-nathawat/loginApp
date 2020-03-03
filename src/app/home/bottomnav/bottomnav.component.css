@@ -1,0 +1,12 @@
+.bottom-nav{
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: antiquewhite;
+    height: 100px;
+    text-align: center;
+}
+.bottom-nav .bottom-nav-item{
+    padding-top: 50px;
+}
