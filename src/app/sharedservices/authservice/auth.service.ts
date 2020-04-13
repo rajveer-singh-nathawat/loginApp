@@ -5,11 +5,14 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
+  username: string;
 
   constructor(private readonly route: Router ) { }
-  authenticate(username , password ) {
-   if (username === 'rajveer' && password === 'singh') {
-    sessionStorage.setItem('authenticateUser', username);
+  authenticate(token) {
+   if (token === sessionStorage.getItem('token')) {
+     this.username = JSON.parse(atob(token.split('.')[1])).fullName;
+     console.log(this.username);
+    sessionStorage.setItem('authenticateUser', this.username);
     return true;
    } else {
    return false;
@@ -23,8 +26,8 @@ let principle = sessionStorage.getItem('authenticateUser');
    const user = sessionStorage.getItem('authenticateUser');
    return !(user === null );
  }
-async logOut() {
-  await sessionStorage.removeItem('authenticateUser');
+ logOut() {
+ sessionStorage.clear();
   this.route.navigate(['signin']);
  }
 }

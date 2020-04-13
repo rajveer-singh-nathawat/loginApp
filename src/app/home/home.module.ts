@@ -8,12 +8,14 @@ import { BottomnavComponent } from './bottomnav/bottomnav.component';
 import { WelcomeComponent } from '../features/welcome/welcome.component';
 import { AdminComponent } from '../features/admin/admin.component';
 import { UserComponent } from '../features/user/user.component';
+import { HttpRequestInterceptorModule } from '../sharedservices/httpinterceptor/httpintercepter.service';
 
 @NgModule({
   declarations: [HomeComponent, TopnavComponent, BottomnavComponent, WelcomeComponent, AdminComponent, UserComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    HttpRequestInterceptorModule
   ]
 })
 export class HomeModule { }

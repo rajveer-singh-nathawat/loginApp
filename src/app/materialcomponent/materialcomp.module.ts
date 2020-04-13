@@ -13,6 +13,7 @@ import {MatSidenavModule,
      MatStepperModule,
      MatRadioModule,
      MatDatepickerModule,
+     MatSnackBarModule,
 
 } from '@angular/material';
 
@@ -29,7 +30,8 @@ const materialComponent = [CommonModule,
   MatInputModule,
   MatStepperModule,
   MatRadioModule,
-  MatDatepickerModule
+  MatDatepickerModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

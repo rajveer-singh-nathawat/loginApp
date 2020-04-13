@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { MaterialcompModule } from './materialcomponent/materialcomp.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpRequestInterceptorModule } from './sharedservices/httpinterceptor/httpintercepter.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialcompModule,
+    HttpClientModule,
+    HttpRequestInterceptorModule,
     ReactiveFormsModule,
     RouterModule.forRoot([])
   ],
