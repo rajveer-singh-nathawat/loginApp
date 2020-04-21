@@ -1,15 +1,19 @@
+
 .register-block{
     margin-left: 36.5%;
     margin-top: 4%;
+}
+.heading{
+    font-size: 215%;
+    margin-left: -33px ;
+    color: white;
 }
 .mat-card-content{
     margin-bottom: 0px !important;
 }
 .example-card {
-    margin-top: 4%;
-    margin-left: 38%;
-    max-width: 320px;
-    background: #98a8ff;
+    max-width: 400px;
+    background-color: rgb(166, 178, 245);
   }
 
 .input-fields{
@@ -17,22 +21,14 @@
 }
 .save-button{
 margin-left: 2%;
-color: white;
-}
-.heading{
-    font-size: -webkit-xxx-large;
-    margin-left: -33px ;
-    color: white;
 }
 .white{
     color: white;
 }
-
 .link{
-    padding-top: 10px;
     color: white;
-
+    padding-top: 10px;
 }
 .span{
-    padding-left: 3%;
+    padding-left: 1%;
 }

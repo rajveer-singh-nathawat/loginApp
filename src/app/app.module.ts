@@ -8,6 +8,7 @@ import { MaterialcompModule } from './materialcomponent/materialcomp.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpRequestInterceptorModule } from './sharedservices/httpinterceptor/httpintercepter.service';
+import { AuthorizationGuardService } from './sharedservices/routeguard/authorization-guard.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { HttpRequestInterceptorModule } from './sharedservices/httpinterceptor/h
     ReactiveFormsModule,
     RouterModule.forRoot([])
   ],
-  providers: [],
+  providers: [AuthorizationGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

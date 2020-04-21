@@ -1,8 +1,31 @@
-<h2>Login</h2>
-<form [formGroup]="signinForm" (ngSubmit)="handleLogin()" autocomplete="off">
-  <span>username</span>
-  <input  placeholder="userName" formControlName="userName" required id="username">
-  <span>password</span>
-  <input type="password" placeholder="password" formControlName="password" required id="password">
-  <button type="submit">Login</button>
-</form>
+
+  <mat-card class="example-card" >
+        <mat-card-header>
+      <h2 class="heading" >Login</h2>
+    </mat-card-header>
+    <mat-card-content class="mat-card-content">
+  <form [formGroup]="signinForm" (ngSubmit)="handleLogin()" class="form-data" autocomplete="off">
+    <mat-form-field class="input-fields">
+      <mat-label class="white">User name.</mat-label>
+      <input matInput formControlName="userName" id="userName">
+      <mat-error *ngIf="signinForm.controls.userName.invalid">userName required</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="input-fields">
+      <mat-label class="white">Password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" id="password">
+      <mat-error *ngIf="signinForm.controls.password.invalid">password required</mat-error>
+      <button mat-icon-button matSuffix type="button" (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon class="white">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-card-actions>   
+   <button mat-stroked-button type="submit" class="save-button" color="primary" id="saveButton">Login</button>
+    <br>
+    <span class="span">Not a user? </span>
+    <a type="button" class="link" href="/authenticate/register"> Register</a>
+  </mat-card-actions>
+  </form>
+</mat-card-content>
+</mat-card>

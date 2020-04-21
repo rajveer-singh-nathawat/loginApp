@@ -9,7 +9,7 @@ const routes: Routes = [
   canActivate: [GuardService],
 },
 {
-  path : 'signin',
+  path : 'authenticate',
   loadChildren: './sharedcomponents/sharedcomponents.module#SharedcomponentsModule'
 },
 {

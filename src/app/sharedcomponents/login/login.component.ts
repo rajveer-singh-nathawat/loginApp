@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {  Router } from '@angular/router';
 import { AuthService } from 'src/app/sharedservices/authservice/auth.service';
 import { SharedService } from '../shared.service';
-import { HttpResponse } from '@angular/common/http';
 
 export class User {
   constructor(
@@ -21,6 +20,7 @@ export class LoginComponent implements OnInit {
   signinForm: FormGroup;
   signinError = 'invalid credentials';
   isLogin: boolean = false;
+  hide = true;
   constructor(private readonly builder: FormBuilder,
               private readonly router: Router,
               private readonly auth: AuthService,
@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
     this.inItForm();
   }
   handleLogin(){
-    // this.user = this.signinForm.value;
     this.sharedService.onLogin(this.signinForm.value).subscribe((data: any) => {
       if(this.auth.authenticate(data)) {
         this.router.navigate(['/welcome']); 
@@ -38,12 +37,6 @@ export class LoginComponent implements OnInit {
       else{
         this.router.navigateByUrl('/'); 
       }
-    // if (this.auth.authenticate(this.user.userName, this.user.password)) {
-    //   this.isLogin = false;
-    //   this.router.navigate(['welcome']);
-    //     } else {
-    //   this.isLogin = true;
-    // }
     
   })}
   inItForm() {

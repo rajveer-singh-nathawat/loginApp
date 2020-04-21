@@ -5,7 +5,7 @@ import {MatSidenavModule,
    MatToolbarModule,
      MatButtonModule,
      MatIconModule,
-   MatListModule,
+     MatListModule,
      MatMenuModule,
      MatDividerModule,
      MatFormFieldModule,
@@ -31,7 +31,10 @@ const materialComponent = [CommonModule,
   MatStepperModule,
   MatRadioModule,
   MatDatepickerModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatToolbarModule,
+  MatDividerModule,
+  MatToolbarModule
 ];
 
 @NgModule({

@@ -9,7 +9,7 @@ import { AuthService } from '../authservice/auth.service';
 export class GuardService implements CanActivate, CanActivateChild{
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     if (!this.auth.isUserLogin()) {
-      this.router.navigate(['signin']);
+      this.router.navigate(['authenticate']);
       return false;
     } else {
       return true;

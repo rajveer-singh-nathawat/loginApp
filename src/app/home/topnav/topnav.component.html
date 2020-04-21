@@ -1,7 +1,13 @@
-<div class="top-nav">
-<h2 class="heading">LoginApp</h2>
-<a class="link" href="/welcome">Welcome</a>
-<a class="link" href="/user">User</a>
-<a class="link" href="/admin">Admin</a>
-<button type="button" class="logout" (click)="onLoggedOut()">Logout</button>
-</div>
+<mat-toolbar color="primary">
+    <a class=" heading " aria-label="Angular Material" [routerLink]="['/welcome']">LoginApp</a>
+
+    <a class=" mat-button " mat-button *ngFor="let item of primaryMenu" href="/{{item.state}}">{{item.name}}</a>
+    <span class="spacer"></span>
+    <span class="principal" aria-hidden="false">{{principal}}</span>
+    <a class="logout" aria-hidden="false" mat-button href="" (click)="onLoggedOut()">
+        <mat-icon>logout</mat-icon>
+        Logout
+    </a>
+
+
+</mat-toolbar>

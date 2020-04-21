@@ -1,22 +1,45 @@
-.top-nav{
-    background: antiquewhite;
-    height: 42px;
+.heading, .heading:active, .heading:hover{
+    font-size: xx-large;
+    color: white;
+    text-decoration: none;
 }
-.top-nav .heading{
-    float: left;
-    padding-left: 11px;
-    padding-top: 3px;
-    font-size: 1.4rem;
-}
-.top-nav .link{
-    float: left;
-    padding-left: 15px;
-    font-size: 18px;
-    padding-top: 5px !important;
-}
-
-.top-nav .logout{
-    float: right;
-    margin-right: 5px;
+ .principal{
     margin-top: 4px;
+    margin-right: 20px;
+}
+.logout{
+    color: white;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+.mat-button{
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    
+}
+.spacer{
+    flex: 1 1 auto;
+}
+a:active, a:hover {
+    color: white;
+    outline: 0;
 }
